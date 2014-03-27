@@ -1,0 +1,75 @@
+.space{
+	
+
+	margin-top: 40px;
+}
+body{
+
+background:#d6d6d6;
+ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #333; 
+}
+
+.superbox{
+background-color: #6dc95e;
+box-shadow: 0 0 5px rgba(0,0,0,0.2);
+padding: 30px;
+border-radius: 0px;
+margin-bottom: 10px;
+}
+
+.container{
+
+	width: 900px;
+	margin: 0px auto;
+}
+
+.NEaD{
+background: url("images/NEaD.png") no-repeat;
+width: 150px ;
+height: 116px;
+ background-size: 110px 85px;
+ float:right;
+}
+.meioleft{
+	width: 50%;
+	 float: left;
+	 margin-top: -15px;
+}
+
+.bs-callout {
+margin: 20px 0;
+padding: 10px;
+border-left: 3px solid #eee;
+height: 105px;
+}
+.bs-callout-warning {
+background-color: #fbf3e8;
+border-color: #f0ad4e;
+}
+
+.bs-callout-danger {
+background-color: #fdf7f7;
+border-color: #d9534f;
+}
+
+.bs-callout-info {
+background-color: #f4f8fa;
+border-color: #5bc0de;
+}
+
+.ipad{
+ 	margin-top: 129px;
+	background: url("images/ipad.png") no-repeat;
+	width: 980px;
+	height: 100%;
+	position: fixed;
+	z-index: -2;
+}
+
+
+
+
+
