@@ -32,6 +32,7 @@ width: 150px ;
 height: 116px;
  background-size: 110px 85px;
  float:right;
+ margin-top: 10px;
 }
 .meioleft{
 	width: 50%;
@@ -44,7 +45,48 @@ margin: 20px 0;
 padding: 10px;
 border-left: 3px solid #eee;
 height: 105px;
+ 
+-webkit-box-shadow: 1px 1px 9px 0px rgba(50, 50, 50, 0.62);
+-moz-box-shadow:    1px 1px 9px 0px rgba(50, 50, 50, 0.62);
+box-shadow:         1px 1px 9px 0px rgba(50, 50, 50, 0.62);
+
 }
+
+
+.tarefalista{
+display: block;
+
+ 
+background-color: #e4f4f8;
+ 
+width: 646px;
+smargin-left: 106px;
+height: auto;
+z-index: -1;
+  
+padding: 20px;
+border-bottom: 1px solid #0aa8cb;
+border-left:10px solid #0aa8cb;
+
+ }
+.tarefalista h1{
+color: #163311;
+font-size: 25px;
+text-shadow: 1px 1px 3px rgba(150, 150, 150, 1);
+margin-top: 1px;
+}
+.tarefalista h2{
+
+font-size: : 18px;
+
+}
+.tarefalista p{
+
+
+
+}
+
+
 .bs-callout-warning {
 background-color: #fbf3e8;
 border-color: #f0ad4e;
@@ -60,8 +102,13 @@ background-color: #f4f8fa;
 border-color: #5bc0de;
 }
 
+.bs-callout-success {
+background-color: #e7eee6;
+border-color: #47c331;
+}
+
 .ipad{
- 	margin-top: 129px;
+ 	margin-top: 145px;
 	background: url("images/ipad.png") no-repeat;
 	width: 980px;
 	height: 100%;
@@ -70,6 +117,14 @@ border-color: #5bc0de;
 }
 
 
-
-
+.tarefas{
+width: 695px;
+margin-top: 115px;
+margin-left: 106px;
+position: fixed;
+height: 100%;
+ 
+background: #fff;
+z-index: -2;
+}
 
