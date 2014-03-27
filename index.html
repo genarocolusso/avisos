@@ -55,12 +55,12 @@
 
 $( document ).ready(function() {
  
- $(".tarefainfo ").hide();
-$( "i#tarefatoggle" ).click(function() {
-  $(this).closest('tr').next('.tarefainfo').toggle('slow');
-   
- 
-});
+  var intervalo = 5000;
+
+  $(".tarefas .tarefalista").first().fadeOut(2000);
+
+
+
 }); 
 
 </script>
@@ -77,21 +77,25 @@ $( "i#tarefatoggle" ).click(function() {
   <div class="tarefas">
 
     <div class="tarefalista ">
-      <h1> Reunião tal tal tal</h1>,
+      <h1> Reunião tal tal tal</h1>
       <h2>Hora: 15:23</h2>
       <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
     </div>
-   <div class="tarefalista ">
-      <h1> Reunião tal tal tal</h1>,
+   <div class="tarefalista  ">
+      <h1> Reunião tal tal tal</h1>
       <h2>Hora: 15:23</h2>
       <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
     </div>
      <div class="tarefalista ">
-      <h1> Reunião tal tal tal</h1>,
+      <h1> Reunião tal tal tal</h1>
       <h2>Hora: 15:23</h2>
       <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
     </div>
-
+    <div class="tarefalista ">
+      <h1> Reunião tal tal tal</h1>
+      <h2>Hora: 15:23</h2>
+      <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
+    </div>
   </div>
   </div>
 <div class="bs-callout bs-callout-info">

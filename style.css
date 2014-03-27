@@ -43,7 +43,7 @@ height: 116px;
 .bs-callout {
 margin: 20px 0;
 padding: 10px;
-border-left: 3px solid #eee;
+border-left: 5px solid #eee;
 height: 105px;
  
 -webkit-box-shadow: 1px 1px 9px 0px rgba(50, 50, 50, 0.62);
@@ -59,8 +59,8 @@ display: block;
  
 background-color: #e4f4f8;
  
-width: 646px;
-smargin-left: 106px;
+width: 645px;
+margin-left: -1px;
 height: auto;
 z-index: -1;
   
@@ -98,12 +98,12 @@ border-color: #d9534f;
 }
 
 .bs-callout-info {
-background-color: #f4f8fa;
-border-color: #5bc0de;
+background-color: #e4f4f8;
+border-color: #0aa8cb;
 }
 
 .bs-callout-success {
-background-color: #e7eee6;
+background-color: #e2f4df;
 border-color: #47c331;
 }
 
