@@ -53,13 +53,25 @@
 
 <script>
 
+
+
 $( document ).ready(function() {
- 
-  var intervalo = 5000;
-
-  $(".tarefas .tarefalista").first().fadeOut(2000);
 
 
+  
+   function loop() 
+    {
+    $(".tarefas .tarefalista").first().css("background-color", "#d9f3f9");
+
+  $(".tarefas .tarefalista").first().delay( 1100 ).slideToggle(9000, function(){ 
+    $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
+
+
+   $(".tarefas .tarefalista").first().remove(); loop();});
+    
+    
+    } 
+   loop();
 
 }); 
 
@@ -74,30 +86,39 @@ $( document ).ready(function() {
 
 
  <div class="ipad">
+ 
+
   <div class="tarefas">
 
     <div class="tarefalista ">
       <h1> Reunião tal tal tal</h1>
-      <h2>Hora: 15:23</h2>
+      <h2>Dia: 04/04/2014 - Hora: 15:23</h2>
       <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
     </div>
    <div class="tarefalista  ">
-      <h1> Reunião tal tal tal</h1>
-      <h2>Hora: 15:23</h2>
+      <h1> Reunião esperta</h1>
+      <h2>Dia: 11/04/2014 - Hora: 11:01</h2>
       <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
     </div>
      <div class="tarefalista ">
-      <h1> Reunião tal tal tal</h1>
-      <h2>Hora: 15:23</h2>
+      <h1> Reunião meiodia</h1>
+      <h2>Dia: 14/05/2014 - Hora: 12:00</h2>
       <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
     </div>
     <div class="tarefalista ">
-      <h1> Reunião tal tal tal</h1>
-      <h2>Hora: 15:23</h2>
+      <h1> Reunião final</h1>
+      <h2>Dia: 06/08/2014 - Hora: 15:00</h2>
+      <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
+    </div>
+    <div class="tarefalista ">
+      <h1> Reunião finaleira</h1>
+      <h2>Dia: 06/08/2014 - Hora: 18:00</h2>
       <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
     </div>
   </div>
   </div>
+
+
 <div class="bs-callout bs-callout-info">
   <div class="meioleft">
     <h4> Agenda - Hoje   </h4>
