@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tarefas</title>
+    <title>Horários - Reuniões</title>
 
     <!-- Bootstrap -->
    <!--  <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -64,8 +64,8 @@ $( document ).ready(function() {
     $(".tarefas .tarefalista").first().css("background-color", "#d9f3f9");
 
   $(".tarefas .tarefalista").first().delay( 2100 ).slideToggle(9000, function(){ 
-    $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
-
+   $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
+    
 
    $(".tarefas .tarefalista").first().remove(); loop();});
     
@@ -80,6 +80,7 @@ $( document ).ready(function() {
 
   </head>
   <body>
+    <?php include 'connect.php' ?>
 <div class="space"></div>
 
     <div class="container ">
@@ -90,31 +91,7 @@ $( document ).ready(function() {
 
   <div class="tarefas">
 
-    <div class="tarefalista ">
-      <h1> Reunião tal tal tal</h1>
-      <h2>Dia: 04/04/2014 - Hora: 15:23</h2>
-      <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no aestudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
-    </div>
-   <div class="tarefalista  ">
-      <h1> Reunião esperta</h1>
-      <h2>Dia: 11/04/2014 - Hora: 11:01</h2>
-      <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
-    </div>
-     <div class="tarefalista ">
-      <h1> Reunião meiodia</h1>
-      <h2>Dia: 14/05/2014 - Hora: 12:00</h2>
-      <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
-    </div>
-    <div class="tarefalista ">
-      <h1> Reunião final</h1>
-      <h2>Dia: 06/08/2014 - Hora: 15:00</h2>
-      <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
-    </div>
-    <div class="tarefalista ">
-      <h1> Reunião finaleira</h1>
-      <h2>Dia: 06/08/2014 - Hora: 18:00</h2>
-      <p> Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio Reunião no estudio </p>
-    </div>
+    <?php include 'selectodosprafrente.php' ?>
   </div>
   </div>
 
@@ -122,7 +99,13 @@ $( document ).ready(function() {
 <div class="bs-callout bs-callout-info">
   <div class="meioleft">
     <h4> Agenda - Hoje   </h4>
-    <p>As reuniões e tarefas são mostradas abaixo</p>
+    <?php 
+     $result = mysql_query("SELECT COUNT(*) FROM `avisos` WHERE DATE_FORMAT(NOW(), '%d') =  `dia` and DATE_FORMAT(NOW(), '%m') =  `mes` and DATE_FORMAT(NOW(), '%Y') =  `ano`") or die($result. "".mysql_error());
+    $numer = mysql_fetch_array($result);     
+
+     echo "Reuniões Hoje:" .$numer[0]." ";
+     ?>
+    
   <p>Hora Atual:
 <span id="txt" style="font-weight: bold"></span>
 </p>
