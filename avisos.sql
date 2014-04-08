@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Máquina: 127.0.0.1
--- Data de Criação: 02-Abr-2014 às 15:26
+-- Data de Criação: 08-Abr-2014 às 17:32
 -- Versão do servidor: 5.5.32
 -- versão do PHP: 5.4.19
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de Dados: `avisos`
 --
+CREATE DATABASE IF NOT EXISTS `avisos` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `avisos`;
 
 -- --------------------------------------------------------
 
@@ -28,24 +30,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `avisos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descricao` text NOT NULL,
-  `hora` int(11) NOT NULL,
-  `min` int(11) NOT NULL,
-  `dia` int(11) NOT NULL,
-  `mes` int(11) NOT NULL,
-  `ano` int(11) NOT NULL,
-  `Titulo` text NOT NULL,
+  `descricao` text COLLATE utf8_unicode_ci NOT NULL,
+  `Titulo` text COLLATE utf8_unicode_ci NOT NULL,
+  `data` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=23 ;
 
 --
 -- Extraindo dados da tabela `avisos`
 --
 
-INSERT INTO `avisos` (`id`, `descricao`, `hora`, `min`, `dia`, `mes`, `ano`, `Titulo`) VALUES
-(1, 'I really don''t understand how people play Diablo. I spent just about seven hours in Act V on the first day and I was only 2/3 through it. Does no one stop in town to talk to every single character with a white star above their head? Am I the only one that spends time browsing/using the artisan shops after every return trip to town? ', 6, 30, 15, 11, 2014, 'Reunião mySQL muito legal'),
-(2, 'I suppose that''s true. I didn''t think about what difficulty people played on. Even if the Artisans are useless I still like to stop at the jeweler and combine some gems every few hours, which takes some time. Hell, there are even times when I have to rearrange my stash like it has animal crossing feng shui. But that''s clearly getting into territory that doesn''t include the normal Diablo player.', 11, 15, 11, 3, 2014, 'Reuniao passada que passou :('),
-(3, 'essa eh de hojemaluco!', 16, 23, 2, 4, 2014, 'HOJE');
+INSERT INTO `avisos` (`id`, `descricao`, `Titulo`, `data`) VALUES
+(18, 'DescriÃ§Ã£o', 'ReuniÃ£o 1', '2014-01-01 07:35:00'),
+(19, 'DescriÃ§Ã£o6555', 'ReuniÃ£o 2', '2014-02-08 09:20:00'),
+(20, 'Daasdsadsa', 'ReuniÃ£o outra', '2014-07-14 13:00:00'),
+(21, 'DescriÃ§Ã£o33', 'Teste', '2014-05-14 15:46:00'),
+(22, 'DescriÃ§Ã£o', 'Uuuuuuuuuuu', '2014-05-14 03:06:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

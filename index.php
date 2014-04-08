@@ -61,7 +61,7 @@ $( document ).ready(function() {
   
    function loop() 
     {
-    $(".tarefas .tarefalista").first().css("background-color", "#d9f3f9");
+    $(".tarefas .tarefalista").first().css("background-color", "#1b7ac3");
 
   $(".tarefas .tarefalista").first().delay( 2100 ).slideToggle(9000, function(){ 
    $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
@@ -83,6 +83,18 @@ $( document ).ready(function() {
     <?php include 'connect.php' ?>
 <div class="space"></div>
 
+<div class="topo">
+  <div class="nav">
+  <div class="meioleft">
+    <h4> Agenda - Hoje   </h4>
+     
+  <p style="font-size: 24px; margin-top: 5px;">Hora Atual:
+<span id="txt" style="font-weight: bold"></span>
+</p>
+  </div>
+    <div class="NEaD" style="margin-top: -4px;"></div>
+</div>
+ </div>
     <div class="container ">
 
 
@@ -91,27 +103,10 @@ $( document ).ready(function() {
 
   <div class="tarefas">
 
-    <?php include 'selectodosprafrente.php' ?>
+    <?php include 'selectAvisos.php' ?>
   </div>
   </div>
 
-
-<div class="bs-callout bs-callout-info">
-  <div class="meioleft">
-    <h4> Agenda - Hoje   </h4>
-    <?php 
-     $result = mysql_query("SELECT COUNT(*) FROM `avisos` WHERE DATE_FORMAT(NOW(), '%d') =  `dia` and DATE_FORMAT(NOW(), '%m') =  `mes` and DATE_FORMAT(NOW(), '%Y') =  `ano`") or die($result. "".mysql_error());
-    $numer = mysql_fetch_array($result);     
-
-     echo "Reuniões Hoje:" .$numer[0]." ";
-     ?>
-    
-  <p>Hora Atual:
-<span id="txt" style="font-weight: bold"></span>
-</p>
-  </div>
-    <div class="NEaD"></div>
-</div>
 
 
     </div>
