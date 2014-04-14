@@ -70,9 +70,9 @@ box-shadow:         1px 1px 9px 0px rgba(50, 50, 50, 0.62);
 }
 
 .tarefalista{
-display: block;
+ display: block;
 
- position: relative;
+ position:  ;
 background-color: #69abdd;
  
 width: 645px;
@@ -83,7 +83,7 @@ z-index: 0;
 padding: 20px;
 sborder-bottom: 1px solid #0aa8cb;
 border-left:10px solid #005695;
-
+box-shadow: 0 0 10px #2d2d2d;
  transition: height, background-color .4s ;
     -webkit-transition:  height, background-color .4s ;
     -moz-transition:  height, background-color .4s ;
@@ -133,7 +133,7 @@ border-color: #47c331;
 
 .ipad{
  	margin-top: 55px;
-	background: url("images/ipad.png") no-repeat;
+	sbackground: url("images/ipad.png") no-repeat;
 	width: 980px;
 	height: 100%;
 	position: fixed;
@@ -148,7 +148,7 @@ margin-left: 106px;
 position: fixed;
 height: 100%;
  
-background: url('images/bgipad.jpg') rgba(255,255,255, 0.6);
+sbackground: url('images/bgipad.jpg') rgba(255,255,255, 0.6);
  
 }
 
@@ -174,6 +174,9 @@ background: url('images/bgipad.jpg') rgba(255,255,255, 0.6);
  padding: 10px; 
 background: rgba(255,255,255, 0.85);
 border-bottom: 1px solid #eee;
+-webkit-box-shadow: 0 5px 10px #858585;
+-moz-box-shadow: 0 5px 10px #858585;
+box-shadow: 0 5px 10px #858585;
  }
 
  .nav{
@@ -183,3 +186,29 @@ border-bottom: 1px solid #eee;
 
 
  }
+
+
+
+
+ #outerdiv {
+width: 250px;
+position: relative;
+} 
+#outerdiv {
+width: 800px;
+height: 380px;
+overflow: hidden;
+position: relative;
+}
+
+#innerdiv {
+position: absolute;
+ top: -90px;
+clip: rect(220px 600px 660px 0px);
+}
+
+input#inputserie{
+
+ color: #000000;
+
+}
