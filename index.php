@@ -12,8 +12,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
    
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href=" font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href=" font-awesome/css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,6 +20,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <link href="style.css" rel="stylesheet">
+   
 <script src="jquery-1.9.1.js"></script>
  
  <script type="text/javascript">
@@ -61,13 +62,17 @@ $( document ).ready(function() {
   
    function loop() 
     {
-    $(".tarefas .tarefalista").first().css("background-color", "#1b7ac3");
+    // $(".tarefas .tarefalista").first().css("background-color", "#1b7ac3");
 
-  $(".tarefas .tarefalista").first().delay( 2100 ).slideToggle(9000, function(){ 
-   $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
-    
+    $(".tarefas .tarefalista").first().css("opacity", "1");
 
-   $(".tarefas .tarefalista").first().remove(); loop();});
+  // $(".tarefas .tarefalista").first().delay( 2100 ).slideToggle(9000, function(){ 
+  //  $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
+
+  $(".tarefas .tarefalista").first().delay( 4100 ).fadeOut(5000, function(){     
+  $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
+  
+  $(".tarefas .tarefalista").first().remove(); loop();});
     
     
     } 
@@ -86,13 +91,11 @@ $( document ).ready(function() {
 <div class="topo">
   <div class="nav">
   <div class="meioleft">
-    <h4> Agenda - Hoje   </h4>
-     
-  <p style="font-size: 24px; margin-top: 5px;">Hora Atual:
-<span id="txt" style="font-weight: bold"></span>
-</p>
+    <h4 style="font-size: 20px;margin-top: 14px;"> Agenda -  Hora Atual:
+<span id="txt"  ></span>
+</h4>
   </div>
-    <div class="NEaD" style="margin-top: -4px;"></div>
+    <div class="NEaD" style=" "></div>
 </div>
  </div>
     <div class="container ">
