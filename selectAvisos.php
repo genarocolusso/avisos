@@ -12,7 +12,7 @@ $data = $row['data'];
  $timestamp = strtotime($data);
 echo ' <div class="tarefalista "> ';
     echo '  <h1>'.$titulo.'</h1>';
-   echo '   <h2>Dia: '.date('d-m-Y', $timestamp).'  Hora: '.date('H:i', $timestamp).'</h2>';
+   echo '   <h2>Dia: '.date('d-m-Y', $timestamp).' Hora: '.date('H:i', $timestamp).'</h2>';
   echo '    <p> '.$descricao.' </p> ';
   echo '  </div> ';
 

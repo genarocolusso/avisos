@@ -59,11 +59,9 @@
   
 
   </head>
-  <body>
+  <body style="overflow: ;">
     <?php include 'connect.php' ?>
-    <?php 
-    
-    ?>
+  
 <div class="space"></div>
 
     <div class="container ">
@@ -80,7 +78,7 @@
 <span id="txt" style="font-weight: bold"></span>
 </p>
   </div>
-    <div class="NEaD" style="margin-top: 0px;"></div>
+    <div class="NEaD" style=" "></div>
 </div>
 
    
@@ -305,6 +303,9 @@
 
 
     </div>
+
+     <?php include 'showCRUD.php' ?>
+
     </div>
  
    

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Horários - Reuniões</title>
 
+<link rel="icon" type="image/png" href="icon.png" />
     <!-- Bootstrap -->
    <!--  <link href="css/bootstrap.min.css" rel="stylesheet"> -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -69,7 +70,7 @@ $( document ).ready(function() {
   // $(".tarefas .tarefalista").first().delay( 2100 ).slideToggle(9000, function(){ 
   //  $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
 
-  $(".tarefas .tarefalista").first().delay( 4100 ).fadeOut(5000, function(){     
+  $(".tarefas .tarefalista").first().delay( 6100 ).fadeOut(5000, function(){     
   $(".tarefas").append("<div class='tarefalista'>"+$(".tarefas .tarefalista").first().html()+"</div>");
   
   $(".tarefas .tarefalista").first().remove(); loop();});
@@ -84,7 +85,7 @@ $( document ).ready(function() {
   
 
   </head>
-  <body>
+  <body style="overflow: hidden;">
     <?php include 'connect.php' ?>
 <div class="space"></div>
 
@@ -95,7 +96,7 @@ $( document ).ready(function() {
 <span id="txt"  ></span>
 </h4>
   </div>
-    <div class="NEaD" style=" "></div>
+    <div class="NEaD" style="margin-top:0px;"></div>
 </div>
  </div>
     <div class="container ">
@@ -106,7 +107,7 @@ $( document ).ready(function() {
 
   <div class="tarefas">
 
-    <?php include 'selectAvisos.php' ?>
+    <?php include 'selectAvisos.php' ?> 
   </div>
   </div>
 
